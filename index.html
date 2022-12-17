@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/regular.min.css" integrity="sha512-k2UAKyvfA7Xd/6FrOv5SG4Qr9h4p2oaeshXF99WO3zIpCsgTJ3YZELDK0gHdlJE5ls+Mbd5HL50b458z3meB/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    height: 55px;
+    background-color: #242526;
+    display: flex;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.fa-facebook{
+    width: 40px;
+    height: 40px;
+    margin: 8px 0 5px 13px;
+}
+.header-search{
+    position: relative;
+}
+.logo1{
+            font-size: 45px;
+            color: #345db8;
+        }
+.fa-magnifying-glass{
+    font-size: 15px;
+    color: #b0b3b8;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.search-box{
+    height: 38px;
+    width: 248px;
+    background: #3a3b3c;
+    color: #d7dae2;
+    margin-top: 7px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.fb__header__menu{
+    color: #b0b3b8;
+    font-size: 25px;
+}
+.fb__header__menu__center i{
+    font-size: 22px;
+    margin-top: 4px;
+    padding: 12px 43px 12px 43px;
+}
+.fb__header__menu__center i:hover{
+    background-color: #4a4a4a;
+    border-radius: 10px;
+}
+.fb__header__menu__center{
+    margin: 0 auto;
+}
+.fb__header__menu__right i{
+    width: 20px;
+    height: 20px;
+    color: #e4e6eb;
+    font-size: 17px;
+    background-color: #3a3b3c;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fb__header__menu__right i:hover{
+    background-color: #5c5c5c;
+}
+.fb__header__menu__right{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 9px 12px 0 0;
+}
+.fb-bia{
+    width: 100vw;
+    height: 405px;
+    background-image: linear-gradient(to bottom, #807163, #242526);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+    position: absolute;
+    top: 55px;
+    left: 0;
+}
+.fb-bia-img{
+    width: 1090px;
+    height: 405px;
+    object-fit: cover;
+    position: absolute;
+    top: -4px;
+    left: 200px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.fb-edit-coverimg{
+    color: #1d1f23;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px 10px 32px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    position: absolute;
+    top: 350px;
+    right: 450px;
+}
+
+.fb-edit-coverimg:hover{
+    background-color: #f5eeee;
+}
+#fb-edit-coverimg-btn{
+    width: 0;
+    height: 0;
+    font-size: 15px;
+    color: #1d1f23;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.fb__avt{
+    width: 100vw;
+    height: 165px;
+    border: none;
+    background-color: #242526;
+    display: flex;
+    position: absolute;
+    top: 460px;
+    left: 0;
+}
+.fb__avt__img{
+    width: 170px;
+    height: 170px;
+    border: solid #242526 4px;
+    border-radius: 50%;
+    position: relative;
+    left: 240px;
+    bottom: 30px;
+}
+.fb__avt__img:hover{
+    opacity: 0.9;
+}
+.camera__icon{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: #3a3b3c;
+    border-radius: 50%;
+    color: #e4e6ea;
+    font-size: 20px;
+    position: absolute;
+    left: 373px;
+    top: 101px;
+}
+.camera__icon i{
+    margin: auto;
+}
+.fa-camera:hover{
+    background-color: #474849;
+}
+
+.fb__avt h1{
+    color: #e4e6eb;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 27px;
+    margin-left: 255px;
+    margin-bottom: 10px;
+}
+.fb__avt p{
+    color: #b0b3b8;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 255px;
+    margin-top: 0px;
+}
+.fb__avt__friend{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+}
+.fb__avt__friend img{
+    width: 32px;
+    height: 32px;
+    border: solid #242526;
+    border-radius: 50%;
+}
+.fb__avt__friend8{
+    position: absolute;
+    left: 250px;
+}
+.fb__avt__friend7{
+    position: absolute;
+    left: 280px;
+}.fb__avt__friend6{
+    position: absolute;
+    left: 310px;
+}
+.fb__avt__friend5{
+    position: absolute;
+    left: 340px;
+}
+.fb__avt__friend4{
+    position: absolute;
+    left: 370px;
+}
+.fb__avt__friend3{
+    position: absolute;
+    left: 400px;
+}
+.fb__avt__friend2{
+    position: absolute;
+    left: 430px;
+}
+.fb__avt__friend1{
+    position: absolute;
+    left: 460px;
+}
+.fb__avt__btn{
+    display: flex;
+    margin-left: 720px;
+}
+.fa-circle-plus{
+    color: #e4e6ea;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+}
+.fb__addstr{
+    color: #e4e6eb;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #2374e1;
+    border: none;
+    padding: 10px 10px 10px 32px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 13px;
+}
+.fb__addstr:hover{
+    background-color: #3281e9;
+}
+.fa-pen{
+    color: #e4e6ea;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+}
+.fb__edit__profile{
+    color: #e4e6eb;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #3a3b3c;
+    border: none;
+    padding: 10px 11px 10px 35px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 13px;
+    left: 10px;
+}
+.fb__edit__profile:hover{
+    background-color: #484949;
+}
+hr{
+    position: relative;
+    top: 615px;
+    width: 66%;
+    margin-left: 240px;
+    background-color: #414346;
+    height: 1px;
+    border: none;
+}
+.fb__mainmenu{
+    width: 100vw;
+    height: 60px;
+    border: none;
+    background-color: #242526;
+    display: flex;
+    position: absolute;
+    top: 625px;
+    left: 0;
+}
+.fb__mainmenu button{
+    color: #b0b3b8;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #242526;
+    border: none;
+    border-radius: 10px;
+    padding: 18px 15px 18px 15px;
+}
+.fa-caret-down{
+    position: relative;
+    left: 10px;
+}
+.fa-ellipsis{
+    color: #b0b3b8;
+    background-color: #3a3b3c;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 10px 17px 10px 17px;
+    position: absolute;
+    right: 280px;
+}
+.fa-ellipsis:hover{
+    background-color: #565555;
+}
+.fb__mainmenu button:hover{
+    background-color: #3a3a3a;
+}
+.fb__mainmenu__btn{
+    margin-top: 3px;
+    margin-left: 250px;
+}
+.messsenger__tooltip {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    right: 15px;
+    bottom: 55px;
+}
+.messsenger__tooltip img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.messsenger__tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #282829;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 25px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -28px;
+    right: 130%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.fa-play{
+    position: absolute;
+    right: -11px;
+    bottom: 10px;
+    color: #282829;
+}
+.new__messenger{
+    width: 28px;
+    height: 28px;
+    background-color: #4b4b4c;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    bottom: 5px;
+    right: 18px;
+    z-index: 1;
+    display: flex;
+}
+.fa-pen-to-square{
+    margin: auto;
+}
+.new__messenger:hover{
+    background-color: #5b5b5c;
+}
+.footer{
+    width: 100vw;
+    padding-bottom: 500px;
+    background-color: #1d1f23;
+    position: absolute;
+    top: 685px;
+    left: 0;
+    right: 0;
+}
+    </style>
+</head>
+<body>
+        <header>
+            <div><i class="fa-brands fa-facebook logo1"></i></div>
+            <div class="header-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search-box" type="text" placeholder="Tìm kiếm trên Facebook">
+            </div>
+            <div class="fb__header__menu fb__header__menu__center">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-tv"></i>
+                <i class="fa-solid fa-store"></i>
+                <i class="fa-solid fa-users-rectangle head-logo"></i>
+            </div>
+            <div class="fb__header__menu fb__header__menu__right">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-brands fa-facebook-messenger"></i>
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/277815758_3254462511540568_8255223042373825201_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GT0eCi0aW8UAX_yRXxr&_nc_ht=scontent.fhan4-1.fna&oh=00_AfBTSpAh3UPQm7jKo6b_6W2MmwctijX73nF_53EgoSGKew&oe=63A37172" alt="">
+        </header>
+        <div class="fb-bia">
+            <img class="fb-bia-img" src="https://scontent.fhan3-3.fna.fbcdn.net/v/t1.6435-9/121646035_2789840394669451_3936203658827518306_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=s5-_aXe5Q4AAX-WRMTq&_nc_ht=scontent.fhan3-3.fna&oh=00_AfCnSZNVyatUogcjk1ufiiqm5r8zPCZDfO8uVhWnDXeImQ&oe=63C557F6" alt="">
+            <button class="fb-edit-coverimg">
+                <i class="fa-solid fa-camera" id="fb-edit-coverimg-btn"></i>
+                Chỉnh sửa ảnh bìa
+            </button>
+        </div>
+        <div class="fb__avt">   
+            <img class = "fb__avt__img" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/277815758_3254462511540568_8255223042373825201_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GT0eCi0aW8UAX_yRXxr&_nc_ht=scontent.fhan4-1.fna&oh=00_AfBTSpAh3UPQm7jKo6b_6W2MmwctijX73nF_53EgoSGKew&oe=63A37172" alt="">
+            <div class="camera__icon">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+            <div class="fb__avt__name">
+                <h1>Đức Khánh</h1>
+                <p>684 bạn bè</p>
+                <div class="fb__avt__friend">
+                    <img class="fb__avt__friend1" src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/312519442_1409659872894386_4471710217397451945_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5dCo8IXo0G4AX8kvmdU&_nc_ht=scontent.fdad3-5.fna&oh=00_AfDYV1E_lv9Dxa4WzQxeZrrG4VCW1b-1DY5GS_ZDMa8flQ&oe=63A19B26" alt="">
+                    <img class="fb__avt__friend2" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/319995567_541868387847655_3462177968610556361_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=sH0pSTH0TEIAX-co4uh&_nc_ht=scontent.fhan4-1.fna&oh=00_AfBlZU8JhHfF-LrWVsymt1YcFvG4OChjjaMEdtiT7jX__Q&oe=63A3DB47" alt="">
+                    <img class="fb__avt__friend3" src="https://scontent.fhan3-3.fna.fbcdn.net/v/t1.6435-9/118282584_1765654320241769_8764815584200248612_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=bRDNQXNslt8AX-9ERDS&_nc_ht=scontent.fhan3-3.fna&oh=00_AfDWrjxaZYdy-o7TmX8iU6OGtdjQMk8-1AjdNPbDyau8HQ&oe=63C566F2" alt="">
+                    <img class="fb__avt__friend4" src="https://scontent.fhan3-3.fna.fbcdn.net/v/t39.30808-6/316167869_849476722871670_7856564115532528683_n.jpg?stp=dst-jpg_s960x960&_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=c-DHATk4tFgAX_O_281&_nc_ht=scontent.fhan3-3.fna&oh=00_AfCrjMYzYiaEqzfP5LbvrnM6oilFbu101gubn-fm22nsBg&oe=63A257B8" alt="">
+                    <img class="fb__avt__friend5" src="https://scontent.fhan3-5.fna.fbcdn.net/v/t39.30808-6/310563340_1758059527914255_5922897720006998756_n.jpg?stp=dst-jpg_p720x720&_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=kpWGZKgs01YAX8gqh4M&_nc_ht=scontent.fhan3-5.fna&oh=00_AfArNnqksWOnrfCTv1yxxp_Y318W-YuTXWjkU5dUtM-jDQ&oe=63A28FEA" alt="">
+                    <img class="fb__avt__friend6" src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/310980082_779440906446559_7745859657558327592_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=W2XSWU6rGiMAX-Q-Eu0&_nc_ht=scontent.fhan3-2.fna&oh=00_AfDFjZ9FlVDBoHd4lnL-_IrWazCTjGHEw5jmN3HTsjKFOQ&oe=63A3183D" alt="">
+                    <img class="fb__avt__friend7" src="https://scontent.fhan3-5.fna.fbcdn.net/v/t39.30808-6/240465127_1141384439720448_1120424783901735388_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=sztfHrjjb_AAX8oUxiC&_nc_ht=scontent.fhan3-5.fna&oh=00_AfDJahQ3EyTkyGO26zkkgXucLLokp8cMHml2i0fNMFzYHg&oe=63A2AFB3" alt="">
+                </div>
+                <div class="fb__avt__btn">
+                    <button class="fb__addstr">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        Thêm vào tin
+                    </button>
+                    <button class="fb__edit__profile">
+                        <i class="fa-solid fa-pen"></i>
+                        Chỉnh sửa trang cá nhân
+                    </button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="fb__mainmenu">
+            <div class="fb__mainmenu__btn">
+                <button>Bài viết</button>
+                <button>Giới thiệu</button>
+                <button>Bạn bè</button>
+                <button>Ảnh</button>
+                <button>Video</button>
+                <button>Reels</button>
+                <button>Xem thêm<i class="fa-solid fa-caret-down"></i></button>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </div>
+        <div class="messsenger__tooltip">
+            <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/277815758_3254462511540568_8255223042373825201_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GT0eCi0aW8UAX_yRXxr&_nc_ht=scontent.fhan4-1.fna&oh=00_AfBTSpAh3UPQm7jKo6b_6W2MmwctijX73nF_53EgoSGKew&oe=63A37172" alt="">
+        </div>
+        <div class="new__messenger">
+            <i class="fa-regular fa-pen-to-square"></i>
+        </div>
+        <div class="footer"></div>
+</body>
+</html>
